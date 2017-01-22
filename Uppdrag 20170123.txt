@@ -1,0 +1,9 @@
+Ert uppdrag denna veckan är att skapa ett matematikprogram till elever i mellanstadiet.
+
+I katalogen /magnus finns en första beta skriven i python3 (mathematics.py) som förklarar funktionaliteten och vilka texter som skall skrivas ut vid olika tillfällen. Betan hanterar enbart addition.
+
+Kravställningen ser ut såhär:
+- Programmet skall skriva ut och läsa in via kommandoprompten.
+- Programmet skall skrivas i C#.
+- Programmet skall hantera alla fyra räknesätten.
+- När koden är färdig skall ni lägga upp källkod och en exekverbar fil (för windows) på github i era respektive kataloger.
