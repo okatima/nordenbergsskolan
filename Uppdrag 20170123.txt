@@ -5,5 +5,5 @@ I katalogen /magnus finns en första beta skriven i python3 (mathematics.py) som
 Kravställningen ser ut såhär:
 - Programmet skall skriva ut och läsa in via kommandoprompten.
 - Programmet skall skrivas i C#.
-- Programmet skall hantera alla fyra räknesätten. Vad gäller division skall alla exempel gå "jämt upp", alltså det skall inte bli någpn rest.
+- Programmet skall hantera alla fyra räknesätten. Vad gäller division skall alla exempel gå "jämnt upp", alltså det skall inte bli någpn rest.
 - När koden är färdig skall ni lägga upp källkod och en exekverbar fil (för windows) på github i era respektive kataloger. Skapa ett konto och skicka över era användarnamn så att jag kan lägga till er som collaborators.
