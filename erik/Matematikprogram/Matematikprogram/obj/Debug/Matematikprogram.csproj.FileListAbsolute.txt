@@ -1,0 +1,6 @@
+c:\users\erik\documents\visual studio 2015\Projects\Matematikprogram\Matematikprogram\bin\Debug\Matematikprogram.exe.config
+c:\users\erik\documents\visual studio 2015\Projects\Matematikprogram\Matematikprogram\bin\Debug\Matematikprogram.exe
+c:\users\erik\documents\visual studio 2015\Projects\Matematikprogram\Matematikprogram\bin\Debug\Matematikprogram.pdb
+c:\users\erik\documents\visual studio 2015\Projects\Matematikprogram\Matematikprogram\obj\Debug\Matematikprogram.csprojResolveAssemblyReference.cache
+c:\users\erik\documents\visual studio 2015\Projects\Matematikprogram\Matematikprogram\obj\Debug\Matematikprogram.exe
+c:\users\erik\documents\visual studio 2015\Projects\Matematikprogram\Matematikprogram\obj\Debug\Matematikprogram.pdb
