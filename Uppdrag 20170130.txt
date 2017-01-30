@@ -2,7 +2,7 @@ Kravställning
 - svårighetsgrad för talen som skall lösas ska kunna anges: lätt, medel, utmaning, grymt.
 - denna gång ska ni också gör ett antal metoder. Ingen kod ska finnas i main (förutom att skapa en instans av klassen och sedan anropa startmetoden) eller konstruktorn, all logik (förrutom meny-hanteringen) ska ligga i namngivna metoder. Jag har gjort "skal" i mitt Java-exempel. Anledningen till detta är att vi nästa gång (2017-02-06) ska skriva tesfall till våra metoder och det blir alldeles för komplext att hantera i en metod. 
 - Som ni ser är min metod startMainApplication() generell och det finns ingen logik som hanterar räknesätt etc. Jag vill som sagt att ni ska göra en liknande lösning.
-- utöver ovanstående skall felhanetring av input hanteras och glöm inte att kommentera era metoder.
+- utöver ovanstående skall felhantering av input hanteras och glöm inte att kommentera era metoder.
 
 Extra:
 - jag vill också att applikationen skall hålla reda på hur många rätt av det totala antalet försök jag har haft, per räknesätt.
