@@ -6,99 +6,74 @@ using System.Threading.Tasks;
 
 namespace mathematics
 {
+
     class Program
     {
+        public static double Operator(string op, double x, double y)
+        {
+            switch (op)
+            {
+                case "+": return x + y;
+                case "-": return x - y;
+                case "*": return x * y;
+                case "/": return x / y;
+                default: throw new Exception("invalid logic");
+            }
+        }
+
         static void Main(string[] args)
         {
             Random random = new Random();
-            string questionText = "Välj räknesätt + (addition) - (subtraktion) / (division) * (multiplikation). För att avsluta skriv q: ";
-
             while (true)
             {
-                int rnr1 = random.Next(0, 11);
-                int rnr2 = random.Next(0, 11);
-                bool answer = false;
+                bool correct = false;
+                string answer;
+                double nr1 = random.Next(1, 11);
+                double nr2 = random.Next(1, 11);
+                double Sum;
+                string questionText = "Välj räknesätt + (addition) - (subtraktion) / (division) * (multiplikation). För att avsluta skriv q: ";
 
                 Console.Write(questionText);
-                string chosenType = Console.ReadLine();
+                string op = Console.ReadLine();
 
-                if (chosenType == "+")
+                if (op == "+" || op == "-" || op == "*" || op == "/")
                 {
-                    int randomSum = rnr1 + rnr2;
-                    string question = "Vad blir summan av " + rnr1 + " + " + rnr2 + "? ";
+                    Sum = Math.Round(Operator(op, nr1, nr2), 2);
 
-                    while (answer == false)
+                    while (correct == false)
                     {
-                        Console.Write(question);
-                        string kalle = Console.ReadLine();
+                        string question = "Vad blir summan av " + nr1 + " " + op + " " + nr2 + " ?";
+                        Console.WriteLine(question);
+                        answer = (Console.ReadLine());
 
-                        if (kalle == Convert.ToString(randomSum))
-                        {
-                            Console.WriteLine("Korrekt!");
-                            answer = true;
-                        }
+                        if (Convert.ToDouble(answer) != Sum)
+                            Console.WriteLine("Försök en gång till.");
+
                         else
-                            Console.WriteLine("Försök en gång till. " + question);
+                        {
+                            Console.Write("Korrekt! ");
+                            while (true)
+                            {
+                                Console.WriteLine("En gång till? (ja/nej)");
+                                string check = Console.ReadLine();
+
+                                if (check == "nej")
+                                {
+                                    correct = true;
+                                    break;
+                                }
+
+                                else if (check == "ja")
+                                {
+                                    nr1 = random.Next(1, 11);
+                                    nr2 = random.Next(1, 11);
+                                    Sum = Math.Round(Operator(op, nr1, nr2), 2);
+                                }
+                            }
+                        }
                     }
                 }
-                else if (chosenType == "-")
-                {
-                    int randomSum = rnr1 - rnr2;
-                    string question = "Vad blir summan av " + rnr1 + " - " + rnr2 + "? ";
-
-                    while (answer == false)
-                    {
-                        Console.Write(question);
-                        string kalle = Console.ReadLine();
-
-                        if (kalle == Convert.ToString(randomSum))
-                        {
-                            Console.WriteLine("dixies");
-                            answer = true;
-                        }
-                        else
-                            Console.WriteLine("Försök en gång till. " + question);
-                    }
-                }
-                else if (chosenType == "*")
-                {
-                    int randomSum = rnr1 * rnr2;
-                    string question = "Vad blir summan av " + rnr1 + " * " + rnr2 + "? ";
-
-                    while (answer == false)
-                    {
-                        Console.Write(question);
-                        string kalle = Console.ReadLine();
-
-                        if (kalle == Convert.ToString(randomSum))
-                        {
-                            Console.WriteLine("dixies");
-                            answer = true;
-                        }
-                        else
-                            Console.WriteLine("Försök en gång till. " + question);
-                    }
-                }
-                else if (chosenType == "/")
-                {
-                    int randomSum = rnr1 / rnr2;
-                    string question = "Vad blir summan av " + rnr1 + " / " + rnr2 + "? ";
-
-                    while (answer == false)
-                    {
-                        Console.Write(question);
-                        string kalle = Console.ReadLine();
-
-                        if (kalle == Convert.ToString(randomSum))
-                        {
-                            Console.WriteLine("dixies");
-                            answer = true;
-                        }
-                        else
-                            Console.WriteLine("Försök en gång till. " + question);
-                    }
-                }
-                else if (chosenType == "q")
+                else if (op == "q")
                 {
                     break;
                 }
